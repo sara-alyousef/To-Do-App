@@ -1,28 +1,28 @@
 # To-Do List App 🗒ᝰ.ᐟ
 
-A simple command-line app for adding, viewing, and removing tasks. Tasks are saved locally in `tasks.txt` when you quit.
+A small command-line app for managing daily tasks.
 
 ## ✿ Run
 
-You’ll need Python 3. From the project folder, run:
+Requires Python 3.
 
 ```bash
 python todo.py
 ```
 
-If needed, use `python3 todo.py` instead.
+On some systems, use `python3 todo.py`.
 
 ## ✧ Usage
 
-Choose an option from the menu:
+- `1` — Add tasks
+- `2` — View tasks
+- `3` — Remove tasks
+- `4` — Quit (saves your tasks)
 
-1. Add tasks (type `done` when you’re finished)
-2. View your tasks
-3. Remove tasks (type `done` when you’re finished)
-4. Quit
+Type `done` to stop adding or removing tasks. Tasks are saved in `tasks.txt`.
 
 ## ♡ Practice
 
-- Python functions, lists, and loops
-- Getting input from the user
-- Reading from and writing to a file
+- Python functions and loops
+- Lists and user input
+- Reading and writing files
