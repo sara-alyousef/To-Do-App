@@ -1,8 +1,10 @@
-# To-Do List App
+# ˚｡⋆୨୧˚ To-Do List App ˚｡⋆୨୧˚
 
-A small command-line to-do list app written in Python. Add tasks, view your list, and remove tasks when they’re done.
+˶ᵔ ᵕ ᵔ˶ A little command-line app for keeping track of your tasks. Add them, view your list, and remove tasks when they’re done.
 
-## Run it
+────୨ৎ────
+
+## ⋆｡°✎ᝰ ˎˊ˗ Run it
 
 You’ll need Python 3. From the project folder, run:
 
@@ -10,20 +12,24 @@ You’ll need Python 3. From the project folder, run:
 python todo.py
 ```
 
-On some systems, use `python3 todo.py` instead.
+If that doesn’t work, try `python3 todo.py`.
 
-## Use it
+────୨ৎ────
+
+## ˚｡⋆ How to use it
 
 Choose an option from the menu:
 
-1. Add tasks (type `done` when you’re finished adding)
-2. View tasks
-3. Remove tasks (type `done` when you’re finished removing)
+1. Add tasks (type `done` when you’re finished)
+2. View your tasks
+3. Remove tasks (type `done` when you’re finished)
 4. Quit
 
-Tasks are saved in `tasks.txt` when you quit. The app creates that file automatically if it doesn’t exist.
+Your tasks are saved in `tasks.txt` when you quit. The app creates the file if it doesn’t exist yet.
 
-## What I practiced
+────୨ৎ────
+
+## ദ്ദി(｡•̀ ,<)~✩‧₊ What I practiced
 
 - Python functions, lists, and loops
 - Getting input from the user
