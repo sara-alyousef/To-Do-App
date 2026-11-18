@@ -1,4 +1,4 @@
-# To-Do List App ୨ৎ
+# To-Do List App 🗒ᝰ.ᐟ
 
 A simple command-line app for adding, viewing, and removing tasks. Tasks are saved locally in `tasks.txt` when you quit.
 
