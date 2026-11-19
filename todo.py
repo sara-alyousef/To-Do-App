@@ -1,8 +1,11 @@
 print("Welcome to the To-Do List App!")
-print("1. Add tasks")
-print("2. View tasks")
-print("3. Remove tasks")
-print("4. Quit")
+
+def menu():
+    print("\n--- MENU ---")
+    print("1. Add tasks")
+    print("2. View tasks")
+    print("3. Remove tasks")
+    print("4. Quit\n")
 
 
 def load_tasks():
@@ -29,25 +32,43 @@ def add_tasks(tasks):
 
 def view_tasks(tasks):
     if tasks:
-        print(f"Your tasks:")
-        for task in tasks:
-            print(f"- {task}")
+        print("\n--- YOUR TASKS ---")
+        for index, task in enumerate(tasks, start=1):
+            print(f"{index}. {task}")
     else:
         print("No tasks to show yet.")
 
 
 def remove_tasks(tasks):
-    while True:
-        task_remove = input("Remove a task (or type \"done\" to finish): ")
-        if task_remove.lower() == "done":
+    if not tasks:
+        print("No tasks to remove.")
+        return
+
+    view_tasks(tasks)
+    
+    while tasks:
+
+        user_choice = input("\nRemove a task by entering its number (or type \"done\" to finish): ").strip()
+        if user_choice.lower() == "done":
                 break
-        for task in tasks:
-            if task_remove.lower() == task.lower():
-                print(f"Removing task: {task_remove}")
-                tasks.remove(task)
-                break 
-        else:
-            print("Task not found. Please try again.")
+        
+        try:
+            task_number = int(user_choice)
+            if task_number < 1:
+                print("Please enter a number starting from 1.")
+                continue
+
+            task_index = task_number - 1
+            removed_task = tasks.pop(task_index)
+            print(f"Removed task: {removed_task}")
+
+        except ValueError:
+            print("Please enter a number.")
+        except IndexError:
+            print("That task number isn't on the list.")
+
+    if not tasks:
+        print("No tasks left.")
 
 def save_tasks(tasks):
     with open("tasks.txt", "w") as file:
@@ -55,11 +76,13 @@ def save_tasks(tasks):
             file.write(task + "\n")
 
 while True:
+    menu()
     user_input = input("What would you like to do? ")
     if user_input == "1":
         add_tasks(tasks)
     elif user_input == "2":
         view_tasks(tasks)
+        input("\nPress Enter to return to the menu...")
     elif user_input == "3":
         remove_tasks(tasks)
     elif user_input == "4":
