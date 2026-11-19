@@ -50,7 +50,7 @@ def remove_tasks(tasks):
 
         user_choice = input("\nRemove a task by entering its number (or type \"done\" to finish): ").strip()
         if user_choice.lower() == "done":
-                break
+            break
         
         try:
             task_number = int(user_choice)
